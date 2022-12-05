@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="buble.scss">
+  <style>
+    body {
+      background-color: #22A39F;
+    }
+
+    .context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+    @font-face {
+      font-family: myFirstFont;
+      src: url(font/RubikDistressed-Regular.ttf);
+    }
+    .lock {
+    width: 100%;
+}
+    p {
+      text-align: center;
+      font-size: 60px;
+      font-family: myFirstFont;
+      color: black;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+
+    .image {
+      width: 100%;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    .btn-hover {
+      width: 90%;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin: 20px;
+      height: 90px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+
+      border-radius: 50px;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .btn-hover:hover {
+      background-position: 100% 0;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .btn-hover:focus {
+      outline: none;
+    }
+
+    .btn-hover.color-3 {
+      background-image: linear-gradient(to right,
+          #667eea,
+          #764ba2,
+          #6b8dd6,
+          #8e37d7);
+      font-size: 30px;
+      font-family: "Trirong", serif;
+      box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    }
+
+    @media (min-width: 500px) and (max-width: 750px) {
+      p {
+      font-size: 40px;
+    }
+      .btn-hover.color-3 {
+        background-image: linear-gradient(to right,
+            #667eea,
+            #764ba2,
+            #6b8dd6,
+            #8e37d7);
+        font-size: 25px;
+        font-family: "Trirong", serif;
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+      }
+    }
+
+    @media (min-width: 300px) and (max-width: 500px) {
+      p {
+      font-size: 30px;
+    }
+      .btn-hover.color-3 {
+        background-image: linear-gradient(to right,
+            #667eea,
+            #764ba2,
+            #6b8dd6,
+            #8e37d7);
+        font-size: 20px;
+        font-family: "Trirong", serif;
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+      }
+    }
+
+    @media (min-width: 100px) and (max-width: 300px) {
+      p {
+      font-size: 15px;
+    }
+      .btn-hover.color-3 {
+        background-image: linear-gradient(to right,
+            #667eea,
+            #764ba2,
+            #6b8dd6,
+            #8e37d7);
+        font-size: 15px;
+        font-family: "Trirong", serif;
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+   
+
+<div class="area" >
+          <ul class="circles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+          </ul>
+  </div >
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-12">
+        <img class="image" src="footer.png" />
+        <div class="card">
+          <p>BAP - Lord of the time</p>
+          <p id="event1"></p>
+        </div>
+      
+        <center><a
+            href="https://forms.office.com/Pages/ResponsePage.aspx?id=OIZY3goAU0i8HVNRBAP9j_6PeSeofUNIi5hVKak21DBUQUVOMUVWRjQ2MlU2WjVZNjhWOUpJSVdZUC4u"
+            target="_blank"><button class="btn-hover color-3">Nhận thử thách "BAP - Lord of the time" tại
+              đây</button></a> <br>
+          <a href="https://3bflourish.github.io/3BFlourish/" target="_blank"><button class="btn-hover color-3">Khám phá thêm về "BAP -
+              Lord of the time" tại đây</button></a>
+        </center>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  </div>
+  
+</body>
+
+</html>
